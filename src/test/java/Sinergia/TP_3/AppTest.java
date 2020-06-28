@@ -8,9 +8,6 @@ import org.junit.jupiter.api.*;
 
 public class AppTest {
 	
-	//Carro carrito = new Carro(1);
-	//Producto producto = new Producto("martillo", 2123, "el mas duro");
-	//Detalle detalle = new Detalle(producto, 2,1);
 	
 	@Test
 	public void carritoConMasDe1ProductoAsociado() {
