@@ -1,9 +1,10 @@
 package Sinergia.TP_3;
 
 import java.util.ArrayList;
+import java.util.stream.*;
 
 public class Carro {
-	private ArrayList<Detalle> detalles = new ArrayList();
+	private ArrayList<Detalle> detalles = new ArrayList<Detalle>();
 	private int idCarro;
 	
 	public Carro(int id) {
@@ -38,4 +39,18 @@ public class Carro {
 		return carrito.getDetalles().size() < 1 ? false : true;
 	}
 	
+	public void realizarCompra() {
+		for (Detalle e : detalles) {
+			//Se reduce la cantidad de stock por cantidad de ventas
+			e.getProducto().setStock(e.getProducto().getStock()-e.getCantidad());
+						
+		}
+	}
+	public void eliminarDetalle(int idDetalle) {
+		for(int i = 0 ; i < detalles.size() ; i++) {
+			if(idDetalle == detalles.get(i).getIdDetalle()) {
+				detalles.remove(i);
+			}
+		}
+	}
 }

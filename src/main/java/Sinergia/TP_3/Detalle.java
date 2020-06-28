@@ -1,13 +1,15 @@
 package Sinergia.TP_3;
 
 public class Detalle {
+	private int idDetalle;
 	private Producto producto;
 	private int cantidad;
 	private float subtotal;
-	public Detalle(Producto producto, int cantidad) {
+	public Detalle(Producto producto, int cantidad,int idDetalle) {
 		super();
 		this.producto = producto;
 		this.cantidad = cantidad;
+		this.idDetalle = idDetalle;
 	}
 	public Producto getProducto() {
 		return producto;
@@ -26,6 +28,12 @@ public class Detalle {
 	}
 	public void setSubtotal(float subtotal) {
 		this.subtotal = subtotal;
+	}
+	public int getIdDetalle() {
+		return idDetalle;
+	}
+	public void setIdDetalle(int idDetalle) {
+		this.idDetalle = idDetalle;
 	}
 	
 	
