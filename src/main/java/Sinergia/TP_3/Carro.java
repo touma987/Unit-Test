@@ -4,15 +4,13 @@ import java.util.ArrayList;
 import java.util.stream.*;
 
 public class Carro {
-	private ArrayList<Detalle> detalles = new ArrayList<Detalle>();
+	private ArrayList<Detalle> detalles;
 	private int idCarro;
 	
-	public Carro(int id) {
+	public Carro(int id, Detalle detalle) {
 		idCarro = id;
-	}
-	public Carro(int id, ArrayList detallitos) {
-		idCarro = id;
-		detalles = detallitos;
+		detalles = new ArrayList<Detalle>();
+		detalles.add(detalle);
 	}
 	
 	public void addDetalle (Detalle detalle) {
