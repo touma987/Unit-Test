@@ -51,4 +51,7 @@ public class Carro {
 			}
 		}
 	}
+	public boolean verificarNoVacio() {
+		return (this.getDetalles().size() > 0) ? true : false;
+	}
 }
